@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack",
     "build:prod": "set NODE_OPTIONS=--openssl-legacy-provider &&webpack --config webpack.config.prod.js"
   },
-  "author": "Maximilian Schwarzmüller",
+  "author": "Sofiane Abou Abderrahim",
   "license": "ISC",
   "browserslist": "> 0.5%",
   "devDependencies": {
@@ -18,6 +20,7 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.2.1",
+    "gh-pages": "^6.0.0",
     "regenerator-runtime": "^0.13.3",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",
